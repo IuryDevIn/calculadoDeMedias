@@ -22,7 +22,7 @@ function adicionaLinha(){
     const inputNotaAtividade = document.getElementById('nota');
 
     if(atividades.includes(inputNomeAtividade.value)){
-        alert(`A atividade: ${inputNomeAtividade.value} já foi inserida`);
+        alert(`A atividade: ${inputNomeAtividade.value} já foi inserida`); 
     }else{
 
     atividades.push(inputNomeAtividade.value); //serve para adicionar conteúdo dentro do array
@@ -48,7 +48,7 @@ function atualizaTabela(){
 function atualizaMediaFinal(){
     const mediaFinal = calculaMediaFinal();
     
-    document.getElementById('mediaFinalValor').innerHTML = mediaFinal;
+    document.getElementById('mediaFinalValor').innerHTML = mediaFinal.toFixed(2); // toFixed limita as casa decimais.
     document.getElementById('mediaFinalResultado').innerHTML = mediaFinal >=notaMinima ? spanAprovado : spanReprovado;   
 
     }
